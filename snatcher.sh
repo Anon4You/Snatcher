@@ -16,7 +16,10 @@ if [ "$?" != '0' ]; then
   exit 1
 fi 
 
-# Requirements 
+# Requirements
+
+command -v lolcat > /dev/null 2>&1 || { echo >&2 "lolcat not found!, Installing... lolcat"; apt install python -y && pip install lolcat 1; }
+
 if [[ ! -d "${HOME}storage" ]]; then
   termux-setup-storage
   mv -f Snatcher-imgs /sdcard > /dev/null 2>&1 
