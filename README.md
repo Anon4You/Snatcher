@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Snatched/img.png">
+  <img src="Snatcher-imgs/img.png">
 </p>
 <p align="center"><b> Hack phone camera by sending a link</b></p>
 
