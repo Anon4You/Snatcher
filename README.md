@@ -11,8 +11,6 @@
 <i>The <b>Snatcher</b> tool is for educational purposes only. Unauthorized access to someone's phone camera without consent is illegal and unethical. Users are responsible for their actions and must not engage in malicious activities. The developers do not support illegal use, which may lead to legal consequences.<b> Always respect privacy and obtain permission before accessing any device</b>
 </i>
 
-## NOTE - Clone in on Home directory
-
 ### Installation
 
 - Just, Clone this repository -
