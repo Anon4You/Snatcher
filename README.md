@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/snatcher.png">
+  <img src="Snatcher-imgs/img.png">
 </p>
 <p align="center"><b>📸 Snatcher - Capture Images from Victim's Camera 📸</b></p>
 
