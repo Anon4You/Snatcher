@@ -45,10 +45,10 @@
    bash snatcher.sh
    ```
 
-### Option 2: Install via Termux (If Alienkrishn Repository is Added)
-1. **Add Alienkrishn Repository** (if not already added):
+### Option 2: Install via Termux (If TermuxVoid Repository is Added)
+1. **Add TermuxVoid Repository** (if not already added):
    ```bash
-   curl -sL https://github.com/Anon4You/alienkrishn/raw/main/addrepo | bash
+   curl -sL https://termuxvoid.github.io/repo/install | bash
    ```
 
 2. **Install Snatcher Using apt**:
@@ -80,7 +80,7 @@ For a step-by-step guide on how to use Snatcher, check out the tutorial on our T
   - **localhost.run**
 - Improved user interface and experience.
 - Enhanced reliability of generated public links.
-- Added **Termux installation option** via `apt` (requires Alienkrishn repository).
+- Added **Termux installation option** via `apt` (requires TermuxVoid repository).
 
 ---
 
