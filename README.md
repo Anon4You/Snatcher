@@ -48,7 +48,7 @@
 ### Option 2: Install via Termux (If TermuxVoid Repository is Added)
 1. **Add TermuxVoid Repository** (if not already added):
    ```bash
-   curl -sL https://termuxvoid.github.io/repo/install | bash
+   curl -sL https://termuxvoid.github.io/repo/install.sh | bash
    ```
 
 2. **Install Snatcher Using apt**:
